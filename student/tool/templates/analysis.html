@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %} Analysis {% endblock %}
+
+{% block content %}
+<div class="analysis-container">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Exam Score Prediction</h2>
+            <p class="lead text-muted">Enter your last four exam scores to predict your next one.</p>
+        </div>
+
+        <div class="card shadow-lg mb-5">
+            <div class="card-body p-4">
+                <h4 class="card-title mb-3"><i class="fas fa-edit me-2"></i>Enter Your Scores</h4>
+                <form action="{% url 'analysis' %}" method="post">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        {% for i in "1234" %}
+                        <div class="col-md-6">
+                            <label for="score{{ i }}" class="form-label">Previous Exam {{ i }} Score</label>
+                            <input type="number" step="0.01" class="form-control" name="score{{ i }}" id="score{{ i }}" required>
+                        </div>
+                        {% endfor %}
+                        
+                        <div class="col-12">
+                            <label for="total_marks" class="form-label">Total Marks for Exam</label>
+                            <input type="number" step="0.01" class="form-control" name="total_marks" id="total_marks" placeholder="e.g., 100" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-2 mt-4">
+                        <i class="fas fa-brain me-2"></i>Predict My Next Score
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        {% if prediction is not None %}
+        <div class="results-section">
+            <div class="card shadow-lg text-center">
+                <div class="card-header bg-dark text-white">
+                    <h4><i class="fas fa-bullseye me-2"></i>Prediction Result</h4>
+                </div>
+                <div class="card-body p-4">
+                    <p class="lead">Based on your trend, your predicted score for the next exam is:</p>
+                    <h2 class="display-4 fw-bold my-3">{{ prediction }} / {{ total_marks }}</h2>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="alert alert-danger mt-4">
+            <i class="fas fa-exclamation-triangle me-2"></i>{{ error }}
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

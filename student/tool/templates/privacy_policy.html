@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %} Privacy Policy {% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="mb-4">Privacy Policy for StudyTool</h1>
+            <p class="text-muted"><strong>Effective Date:</strong> August 15, 2025</p>
+
+            <h4 class="mt-5">1. Introduction</h4>
+            <p>Welcome to StudyTool ("we," "our," "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information we collect, how we use it, and what rights you have in relation to it.</p>
+
+            <h4 class="mt-5">2. Information We Collect</h4>
+            <p>We collect personal information that you voluntarily provide to us when you register on the StudyTool, express an interest in obtaining information about us or our products and services, when you participate in activities on the StudyTool (such as posting messages in the group chat), or otherwise when you contact us.</p>
+            <ul>
+                <li><strong>Personal Identification Information:</strong> Your first name, last name, email address, mobile number, address, and other details you provide during registration.</li>
+                <li><strong>User-Generated Content:</strong> Any data you create or upload, including your test scores for analysis, events on your schedule, and messages you post in the group chat.</li>
+                <li><strong>Quiz Data:</strong> The answers you submit in quizzes and the resulting scores.</li>
+            </ul>
+
+            <h4 class="mt-5">3. How We Use Your Information</h4>
+            <p>We use the information we collect for various purposes, including:</p>
+            <ul>
+                <li><strong>To Provide and Manage Your Account:</strong> To create and manage your account, provide our services, and allow you to log in.</li>
+                <li><strong>To Enable User-to-User Communication:</strong> Your name and the messages you post will be visible to other registered users in the group chat feature.</li>
+                <li><strong>To Personalize Your Experience:</strong> To provide features like the personal schedule and performance analysis.</li>
+                <li><strong>To Improve Our Services:</strong> To understand how our users interact with the features and to make improvements.</li>
+            </ul>
+
+            <h4 class="mt-5">4. Will Your Information Be Shared With Anyone?</h4>
+            <p>We do not share, sell, rent, or trade any of your personal information with third parties for their promotional purposes.</p>
+            <p>Your username and any content you post in the group chat will be visible to all other registered users of the service.</p>
+
+            <h4 class="mt-5">5. How We Keep Your Information Safe</h4>
+            <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. We hash user passwords and take reasonable steps to secure your data. However, please remember that no method of transmission over the Internet is 100% secure.</p>
+
+            <h4 class="mt-5">6. Your Privacy Rights</h4>
+            <p>You may review, change, or terminate your account at any time. If you would like to request access to or deletion of your data, please contact us using the contact information provided below.</p>
+
+            <h4 class="mt-5">7. Changes to This Privacy Policy</h4>
+            <p>We may update this privacy policy from time to time. The updated version will be indicated by an updated "Effective Date" at the top of this policy. We encourage you to review this privacy policy frequently to be informed of how we are protecting your information.</p>
+
+            <h4 class="mt-5">8. Contact Us</h4>
+            <p>If you have questions or comments about this policy, you can contact us at <a href="{% url 'contact_us' %}">Contact Us</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+.contact-container {
+    background-color: whitesmoke;
+}
+
+.team-card {
+    background: white;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.team-icon-circle {
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, blueviolet 0%, dodgerblue 100%);
+    color: white;
+}
+
+.contact-details p {
+    margin-bottom: 8px;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: dimgray;
+    transition: color 0.2s ease-in-out;
+}
+
+.contact-details a:hover {
+    color: dodgerblue;
+}
+
+.contact-details i {
+    color: blueviolet;
+}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Contact Us {% endblock %}
+
+{% block content %}
+<div class="contact-container">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Meet the Team</h2>
+            <p class="lead text-muted">We are the creators of StudyTool, dedicated to helping students succeed.</p>
+        </div>
+
+        <div class="row g-4">
+            {% for member in members %}
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center team-card">
+                    <div class="card-body">
+                        <div class="team-icon-circle">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        
+                        <h5 class="card-title fw-bold mt-4">{{ member.name }}</h5>
+                        <hr>
+                        <div class="contact-details text-start">
+                            <p>
+                                <i class="fas fa-envelope me-2"></i>
+                                <a href="mailto:{{ member.email }}">{{ member.email }}</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-phone me-2"></i>
+                                <a href="tel:+91{{ member.phone }}">+91 {{ member.phone }}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

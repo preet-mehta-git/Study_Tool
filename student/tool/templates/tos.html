@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %} Terms of Service {% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="mb-4">Terms of Service for StudyTool</h1>
+            <p class="text-muted"><strong>Last Updated:</strong> August 15, 2025</p>
+
+            <h4 class="mt-5">1. Agreement to Terms</h4>
+            <p>By accessing or using our service, StudyTool ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, then you may not access the Service.</p>
+
+            <h4 class="mt-5">2. User Accounts</h4>
+            <p>When you create an account with us, you must provide information that is accurate, complete, and current at all times. You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password.</p>
+
+            <h4 class="mt-5">3. User-Generated Content</h4>
+            <p>Our Service allows you to post content, such as messages in the group chat and events in your schedule ("User Content"). You are responsible for the User Content that you post to the Service, including its legality, reliability, and appropriateness.</p>
+            <p>By posting User Content, you grant us the right and license to use, display, and distribute such content on and through the Service. You retain any and all of your rights to any User Content you submit.</p>
+
+            <h4 class="mt-5">4. User Conduct</h4>
+            <p>You agree not to use the Service to:</p>
+            <ul>
+                <li>Post any content that is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable.</li>
+                <li>Impersonate any person or entity.</li>
+                <li>Upload or transmit any form of malicious code, such as viruses or worms.</li>
+                <li>Violate any applicable local, state, national, or international law.</li>
+            </ul>
+
+            <h4 class="mt-5">5. Disclaimer of Warranties</h4>
+            <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis. Our Service is provided without warranties of any kind, whether express or implied. The performance analysis and score prediction features are for informational purposes only and do not constitute a guarantee of future academic success.</p>
+
+            <h4 class="mt-5">6. Termination</h4>
+            <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+
+            <h4 class="mt-5">7. Changes to Terms</h4>
+            <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide notice of any changes by posting the new Terms of Service on this page.</p>
+
+            <h4 class="mt-5">8. Contact Us</h4>
+            <p>If you have any questions about these Terms, you can contact us at <a href="{% url 'contact_us' %}">Contact Us</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

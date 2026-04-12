@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} Profile {% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <div class="card profile-card">
+        <div class="card-header text-center">
+            <h2>My Profile</h2>
+        </div>
+        <div class="card-body">
+            {% if user_profile %}
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <strong><i class="fas fa-user"></i> Full Name:</strong>
+                        <p>{{ user_profile.first_name }} {{user_profile.middle_name}} {{ user_profile.last_name }}</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong><i class="fas fa-envelope"></i> Email:</strong>
+                        <p>{{ user_profile.email }}</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong><i class="fas fa-phone"></i> Mobile Number:</strong>
+                        <p>{{ user_profile.mobile_number }}</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong><i class="fas fa-birthday-cake"></i> Birth Date:</strong>
+                        <p>{{ user_profile.birth_date }}</p>
+                    </div>
+                </div>
+            {% else %}
+                <div class="alert alert-danger" role="alert">
+                    Profile information could not be found.
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %} Quiz {% endblock %}
+
+{% block content %}
+<div class="quiz-container">
+    <div class="container py-5">
+        
+        {% if score is not None %}
+        <div class="card shadow-lg text-center">
+            <div class="card-body p-5">
+                <h2 class="display-5 fw-bold">Quiz Complete!</h2>
+                <p class="lead text-muted">You have finished the quiz.</p>
+                <div class="result-circle my-4">
+                    <span class="score">{{ score }}</span>
+                    <span class="total">/ {{ total_questions }}</span>
+                </div>
+                <p class="h4">You scored {{ score }} out of {{ total_questions }}.</p>
+                <a href="{% url 'quiz' %}" class="btn btn-primary btn-lg mt-4">Try Another Quiz</a>
+            </div>
+        </div>
+
+        {% else %}
+        <div class="card shadow-lg">
+            <div class="card-body p-5">
+                <h2 class="text-center display-6 fw-bold mb-4">Django Quiz</h2>
+                <form action="{% url 'quiz' %}" method="post">
+                    {% csrf_token %}
+                    
+                    {% for question in questions %}
+                    <div class="question-block mb-4">
+                        <p class="fw-bold question-text">{{ forloop.counter }}. {{ question.text }}</p>
+                        <div class="choices">
+                            {% for choice in question.choice_set.all %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question_{{ question.id }}" id="choice_{{ choice.id }}" value="{{ choice.id }}" required>
+                                <label class="form-check-label" for="choice_{{ choice.id }}">
+                                    {{ choice.text }}
+                                </label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    {% endfor %}
+
+                    <button type="submit" class="btn btn-primary w-100 py-2 mt-3">Submit Answers</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="alert alert-warning mt-4">{{ error }}</div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
