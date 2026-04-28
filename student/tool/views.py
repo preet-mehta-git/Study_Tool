@@ -296,23 +296,8 @@ def contact_us(request):
     team_members = [
         {
             'name': 'Preet Mehta',
-            'email': 'preet@studytool.com',
-            'phone': '9876543210'
-        },
-        {
-            'name': 'Rushiraj Raijada',
-            'email': 'rushiraj@studytool.com',
-            'phone': '9876543211'
-        },
-        {
-            'name': 'Mrudang Dave',
-            'email': 'mrudang@studytool.com',
-            'phone': '9876543212'
-        },
-        {
-            'name': 'Krish Radadiya',
-            'email': 'krish@studytool.com',
-            'phone': '9876543213'
+            'email': 'preet.abc2005@gmail.com',
+            'phone': '9824923752'
         }
     ]
     

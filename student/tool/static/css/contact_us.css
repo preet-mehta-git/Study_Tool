@@ -1,50 +1,115 @@
 .contact-container {
-    background-color: whitesmoke;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
 }
 
-.team-card {
+.gradient-text {
+    background: linear-gradient(135deg, #8a2be2 0%, #1e90ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.premium-card {
     background: white;
     border: none;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
 }
 
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+.premium-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.team-icon-circle {
-    font-size: 40px;
-    width: 80px;
-    height: 80px;
+.team-icon-circle-large {
+    font-size: 60px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: linear-gradient(135deg, blueviolet 0%, dodgerblue 100%);
+    background: linear-gradient(135deg, #8a2be2 0%, #1e90ff 100%);
     color: white;
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
 }
 
-.contact-details p {
-    margin-bottom: 8px;
+.role-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(138, 43, 226, 0.1);
+    color: #8a2be2;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
-.contact-details a {
+.contact-info-list {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+}
+
+.contact-info-item:hover {
+    background: #f0f1f2;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #1e90ff;
+    margin-right: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.info-content span {
+    display: block;
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.info-content a {
+    color: #343a40;
     text-decoration: none;
-    color: dimgray;
-    transition: color 0.2s ease-in-out;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-.contact-details a:hover {
-    color: dodgerblue;
+.info-content a:hover {
+    color: #8a2be2;
 }
 
-.contact-details i {
-    color: blueviolet;
+.btn-primary {
+    background: linear-gradient(135deg, #1e90ff 0%, #8a2be2 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
 }

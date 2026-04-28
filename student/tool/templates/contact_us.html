@@ -1,34 +1,56 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %} Contact Us {% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/contact_us.css' %}">
 <div class="contact-container">
     <div class="container py-5">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">Meet the Team</h2>
-            <p class="lead text-muted">We are the creators of StudyTool, dedicated to helping students succeed.</p>
+            <h2 class="display-4 fw-bold gradient-text">Contact the Creator</h2>
+            <p class="lead text-muted">Get in touch with the lead developer of StudyTool.</p>
         </div>
 
-        <div class="row g-4">
+        <div class="row justify-content-center">
             {% for member in members %}
-            <div class="col-lg-3 col-md-6">
-                <div class="card h-100 text-center team-card">
-                    <div class="card-body">
-                        <div class="team-icon-circle">
-                            <i class="fas fa-user-tie"></i>
+            <div class="col-lg-5 col-md-8">
+                <div class="card team-card premium-card">
+                    <div class="card-body py-5">
+                        <div class="team-icon-circle-large">
+                            <i class="fas fa-user-graduate"></i>
                         </div>
                         
-                        <h5 class="card-title fw-bold mt-4">{{ member.name }}</h5>
-                        <hr>
-                        <div class="contact-details text-start">
-                            <p>
-                                <i class="fas fa-envelope me-2"></i>
-                                <a href="mailto:{{ member.email }}">{{ member.email }}</a>
-                            </p>
-                            <p>
-                                <i class="fas fa-phone me-2"></i>
-                                <a href="tel:+91{{ member.phone }}">+91 {{ member.phone }}</a>
-                            </p>
+                        <h2 class="card-title fw-bold mt-4 mb-3">{{ member.name }}</h2>
+                        <div class="role-badge mb-4">Lead Developer & Founder</div>
+                        
+                        <hr class="w-50 mx-auto mb-4">
+                        
+                        <div class="contact-info-list text-center">
+                            <div class="contact-info-item mb-3">
+                                <div class="icon-box">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span>Email</span>
+                                    <a href="mailto:{{ member.email }}">{{ member.email }}</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="icon-box">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span>Contact Number</span>
+                                    <a href="tel:+91{{ member.phone }}">+91 {{ member.phone }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <a href="{% url 'home' %}" class="btn btn-primary btn-lg rounded-pill px-5">
+                                <i class="fas fa-arrow-left me-2"></i> Back to Home
+                            </a>
                         </div>
                     </div>
                 </div>
