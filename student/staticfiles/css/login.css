@@ -1,0 +1,92 @@
+:root {
+    --primary-color: dodgerblue;
+    --secondary-color: darkblue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
+}
+
+.login-wrapper {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 48px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-header h1 {
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: grey;
+}
+
+.input-group-with-icon {
+    position: relative;
+}
+
+.input-group-with-icon .fas {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: lightgrey;
+    z-index: 10;
+}
+
+.login-form .form-floating label {
+    color: dimgray;
+    padding-left: 48px;
+}
+
+.login-form .form-control {
+    padding-left: 48px;
+    height: 55px;
+    border-radius: 8px;
+}
+
+.login-form .form-control:focus {
+    box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.25);
+    border-color: var(--primary-color);
+}
+
+.login-form .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.login-form .btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.login-footer a {
+    color: var(--primary-color);
+    font-weight: 500;
+}

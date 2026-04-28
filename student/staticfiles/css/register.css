@@ -1,0 +1,78 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: whitesmoke;
+}
+
+.auth-wrapper {
+    display: grid;
+    place-items: center;
+    min-height: 900px;
+    padding: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px lightgrey;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-header h1 {
+    color: darkblue;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: dimgrey;
+}
+
+.input-group-with-icon {
+    position: relative;
+}
+
+.input-group-with-icon .fas {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    color: slategrey;
+    z-index: 10;
+}
+
+.auth-form .form-floating label {
+    padding-left: 48px;
+}
+
+.auth-form .form-control {
+    padding-left: 48px;
+    height: 55px;
+    border-radius: 8px;
+}
+
+.auth-form .btn-primary {
+    background-color: royalblue;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.auth-form .btn-primary:hover {
+    background-color: darkblue;
+    transform: translateY(-2px);
+}
+
+.auth-footer a {
+    color: royalblue;
+    font-weight: 500;
+}

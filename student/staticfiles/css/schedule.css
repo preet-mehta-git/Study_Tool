@@ -1,0 +1,60 @@
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rebeccapurple 0%, royalblue 100%);
+    color: white;
+    padding: 16px;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+    border: 1px solid lightgray;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    height: 120px;
+}
+
+.calendar th {
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.day-number {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+td.noday {
+    background-color: whitesmoke;
+}
+
+.calendar td ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+.calendar td li {
+    padding: 3px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.event-study {
+    background-color: royalblue;
+}
+
+.event-exam {
+    background-color: red;
+}

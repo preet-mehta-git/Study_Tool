@@ -1,0 +1,44 @@
+.profile-container {
+    padding: 50px 0;
+    background-color: lightgrey;
+}
+
+.profile-card {
+    max-width: 700px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card .card-header {
+    background: linear-gradient(135deg, purple 0%, dodgerblue 100%);
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px;
+}
+
+.detail-item {
+    margin-bottom: 24px;
+}
+
+.detail-item strong {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.detail-item p {
+    margin: 0;
+    font-size: 18px;
+    color: grey;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.detail-item i {
+    margin-right: 10px;
+    color: dodgerblue;
+}
